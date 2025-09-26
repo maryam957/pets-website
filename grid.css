@@ -56,3 +56,152 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+
+/* === Grid Layout Styling for Gallery Page === */
+/* GALLERY SECTION */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  /* 4 per row */
+  gap: 20px;
+}
+
+.gallery-container {
+  padding: 0 2rem;   /* adds space left and right */
+}
+
+/* Container around heading */
+.gallery-container h2 {
+  display: flex;      /*place text and lines in one line*/
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /*space between text and lines*/
+  margin: 2rem 0;
+  font-size: 2rem;
+  text-align: center;
+  background: linear-gradient(90deg, #ff9800, #ff5722);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+/* Divider lines */
+.gallery-container h2::before,
+.gallery-container h2::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: #ddd;
+}
+
+.gallery-container h2 span {
+  display: inline-block;
+  background: #fff;
+  border: 3px solid #ff9800;
+  border-radius: 50%;
+  padding: 0.6rem 1.2rem;
+  box-shadow: 0 0 12px rgba(255,152,0,0.5);
+}
+
+/* Each card */
+.gallery-grid figure {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin: 0;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  border: 2px solid transparent;
+}
+
+/* Hover effect: orange neon glow + border */
+.gallery-grid figure:hover {
+  transform: translateY(-8px);
+  border: 2px solid #ff9800;
+  box-shadow: 0 0 15px #ff9800, 0 0 30px rgba(255,152,0,0.6);
+}
+
+/* Image styling */
+.gallery-grid img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px 12px 0 0;
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+/* Hover zoom on images */
+.gallery-grid figure:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.1) contrast(1.05);
+}
+
+/* Caption styling */
+.gallery-grid figcaption {
+  padding: 12px;
+  font-size: 0.95rem;
+  color: #555;
+  background: #fff;
+  border-top: 1px solid #eee;
+}
+
+.gallery-grid figcaption strong {
+  color: #ff9800;
+}
+
+.gallery-container:nth-child(even) {
+  background: linear-gradient(135deg, #fff8e1, #ffe0b2);
+}
+.gallery-container:nth-child(odd) {
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+}
+
+.gallery-grid figure:hover {
+  transform: translateY(-8px) rotate(-1deg);
+}
+.footer {
+  background: linear-gradient(90deg, #ff9800, #ff5722);
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+/*social media icons*/
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  color: #fff;               /* icon color */
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: #ffcc80;            /* hover effect */
+  transform: scale(1.2);
+  font-size: 2rem;
+}
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
