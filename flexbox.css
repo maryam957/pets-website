@@ -263,14 +263,6 @@
   line-height: 1.5;
 }
 
-/* Paw Divider under Header */
-.header h1::after {
-  content: "🐾 🐾 🐾";
-  display: block;
-  margin-top: 8px;
-  font-size: 1.2rem;
-  color: #ff9800;
-}
 
 /* Responsive */
 @media (max-width: 768px) {
