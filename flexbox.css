@@ -132,33 +132,7 @@
   }
 }
 
-.footer {
-  background: linear-gradient(90deg, #ff9800, #ff5722);
-  color: #fff;
-  padding: 2rem;
-  text-align: center;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
 
-
-/*social media icons*/
-.social-icons {
-  margin-top: 1rem;
-}
-
-.social-icons a {
-  color: #fff;               /* icon color */
-  margin: 0 10px;
-  font-size: 1.5rem;
-  transition: 0.3s ease-in-out;
-}
-
-.social-icons a:hover {
-  color: #ffcc80;            /* hover effect */
-  transform: scale(1.2);
-  font-size: 2rem;
-}
 
 /* Responsive */
 @media (max-width: 768px) {
