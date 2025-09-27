@@ -1,31 +1,76 @@
 /* === Flexbox Layout Styling for Home Page === */
 
-/* Hero Section (Flexbox layout) */
+/* Navbar */
+.navbar {
+  background: #ff9800;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0.8rem;
+}
+.navbar li {
+  margin: 0 1rem;
+}
+.navbar a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.navbar a:hover,
+.navbar a.active {
+  color: #222;
+}
+
+/* Hero Section */
 .hero {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
-  background: #fff8e1;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #fff3e0, #ffe0b2);
   flex-wrap: wrap;
 }
 .hero img {
   max-width: 400px;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 15px;
   margin: 1rem;
+  transition: transform 0.3s ease;
+}
+.hero img:hover {
+  transform: scale(1.05);
 }
 .hero-text {
   flex: 1;
   min-width: 250px;
   margin: 1rem;
+  animation: fadeIn 1.5s ease;
 }
 .hero-text h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 1rem;
 }
 .hero-text p {
   margin-bottom: 1rem;
+}
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background: #ff9800;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background: #e68900;
+  transform: scale(1.05);
 }
 
 /* Main Content (Flexbox layout) */
@@ -41,26 +86,39 @@
   margin: 1rem;
   padding: 1.5rem;
   background: white;
-  border-radius: 10px;
+  border-radius: 12px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.card h3 {
+.card i {
   margin-bottom: 0.5rem;
   color: #ff9800;
 }
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
 
-/* Responsive Adjustments */
+
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
+    text-align: center;
   }
   .content {
     flex-direction: column;
     align-items: center;
   }
 }
-
 
 
 /* === Flexbox Layout Styling for About Page === */
