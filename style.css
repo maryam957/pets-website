@@ -16,27 +16,48 @@ body {
   background: #ffcc80;
   text-align: center;
   padding: 2rem 1rem;
+  animation: fadeSlide 1s ease-out;
 }
 .header h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
+  background: linear-gradient(to right, #ff9800, #e65100);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textGlow 2s infinite alternate;
 }
 .header p {
   font-size: 1.2rem;
   color: #444;
+  animation: fadeIn 2s ease-in;
 }
 
-/* Navbar */
+/* Animations */
+@keyframes fadeSlide {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes textGlow {
+  from { text-shadow: 0 0 5px #ff9800; }
+  to { text-shadow: 0 0 15px #e65100; }
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Navbar (same style everywhere) */
 .navbar ul {
   list-style: none;
   display: flex;
   justify-content: center;
   background: #ff9800;
   flex-wrap: wrap;
-}
-.navbar li {
   margin: 0;
+  padding: 0.8rem;
+  
 }
+
 .navbar a {
   text-decoration: none;
   color: white;
@@ -48,6 +69,11 @@ body {
 .navbar a:hover {
   background: #e65100;
   border-radius: 5px;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  font-weight: bold;
+  
+
 }
 
 /* Buttons */
@@ -62,6 +88,7 @@ body {
 }
 .btn:hover {
   background: #e65100;
+  transform: scale(1.05);
 }
 
 /* Footer */
@@ -82,20 +109,42 @@ body {
   color: black;
 }
 
-/*social media icons*/
+/* Social media icons */
 .social-icons {
   margin-top: 1rem;
 }
-
 .social-icons a {
-  color: #fff;               /* icon color */
+  color: #fff;
   margin: 0 10px;
   font-size: 1.5rem;
   transition: 0.3s ease-in-out;
 }
-
 .social-icons a:hover {
-  color: #ffcc80;            /* hover effect */
+  color: #ffcc80;
   transform: scale(1.2);
   font-size: 2rem;
 }
+
+/* Go to Top Button (Pure CSS) */
+.goTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-align: center;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  background: #ff9800;
+  color: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+.goTopBtn:hover {
+  background: #e65100;
+  transform: scale(1.1);
+}
+

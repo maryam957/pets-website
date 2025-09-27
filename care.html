@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,8 +6,10 @@
   <title>Pet Care - Pets Website</title>
   <link rel="stylesheet" href="style.css">   <!-- Global styles -->
   <link rel="stylesheet" href="grid.css">    <!-- Custom Grid & Video styles -->
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
+<body id="top">
   <!-- Header -->
   <header class="header">
     <h1>Pet Care</h1>
@@ -29,6 +31,7 @@
   <!-- Care Grid Section with Videos -->
   <section class="care-container">
     <div class="care-card">
+      <i class="fas fa-bone"></i>
       <a href="videos/food.mp4" target="_blank">
         <video src="videos/food.mp4" muted autoplay loop></video>
       </a>
@@ -37,6 +40,7 @@
     </div>
 
     <div class="care-card">
+      <i class="fas fa-shower"></i>
       <a href="videos/groom.mp4" target="_blank">
         <video src="videos/groom.mp4" muted autoplay loop></video>
       </a>
@@ -45,6 +49,7 @@
     </div>
 
     <div class="care-card">
+      <i class="fas fa-dumbbell"></i>
       <a href="videos/exercise.mp4" target="_blank">
         <video src="videos/exercise.mp4" muted autoplay loop></video>
       </a>
@@ -53,6 +58,7 @@
     </div>
 
     <div class="care-card">
+      <i class="fas fa-heartbeat"></i>
       <a href="videos/health.mp4" target="_blank">
         <video src="videos/health.mp4" muted autoplay loop></video>
       </a>
@@ -60,6 +66,15 @@
       <p>Routine vet visits and vaccinations help prevent diseases and ensure long life.</p>
     </div>
   </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <h2>Need more pet care tips?</h2>
+    <a href="contact.html" class="btn">Ask an Expert</a>
+  </section>
+
+  <!-- Go Top Button -->
+  <a href="#top" class="goTopBtn">↑</a>
 
   <!-- Footer -->
   <footer class="footer">
